@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Flutter Grocery App",
-      home: CategoryPage(),
+      home: CategoryPage(), // this is my test comment.
     );
   }
 }
