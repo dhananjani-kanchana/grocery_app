@@ -5,7 +5,7 @@ import 'package:flutter/widgets.dart';
 class PriceListWidget extends StatelessWidget {
   final int circleNumber;
   final String productName;
-  final int productQuantity;
+  final double productQuantity;
   final String unitName;
 
   const PriceListWidget({
@@ -45,8 +45,12 @@ class PriceListWidget extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        productName,
+                      SizedBox(
+                        width: 100,
+                        child: Text(
+                          productName,
+                          overflow: TextOverflow.ellipsis,
+                        ),
                       ),
                     ],
                   ),
@@ -55,7 +59,7 @@ class PriceListWidget extends StatelessWidget {
               Container(
                 height: 45,
                 width: 150,
-                margin: EdgeInsets.only(right: 50),
+                margin: const EdgeInsets.only(right: 50),
                 decoration: BoxDecoration(
                   color: const Color(0xffD9D9D9).withOpacity(0.40),
                   borderRadius: BorderRadius.circular(50),
@@ -64,7 +68,7 @@ class PriceListWidget extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Text(
-                      productQuantity.toString() + unitName,
+                      "$productQuantity $unitName",
                     ),
                     Container(
                       height: 30,
@@ -77,7 +81,9 @@ class PriceListWidget extends StatelessWidget {
                         ),
                       ),
                       child: const Center(
-                        child: Text("+"),
+                        child: Icon(
+                          Icons.add,
+                        ),
                       ),
                     ),
                     Container(
@@ -91,7 +97,9 @@ class PriceListWidget extends StatelessWidget {
                         ),
                       ),
                       child: const Center(
-                        child: Text("-"),
+                        child: Icon(
+                          Icons.remove,
+                        ),
                       ),
                     ),
                   ],
@@ -100,7 +108,7 @@ class PriceListWidget extends StatelessWidget {
             ],
           ),
           Divider(
-            color: Color(0xff000000).withOpacity(0.13),
+            color: const Color(0xff000000).withOpacity(0.13),
           )
         ],
       ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_grocery/pages/home_page/product_details/price_list.dart';
 import 'package:flutter_grocery/pages/home_page/product_details/widgets/product_information.dart';
+import 'package:flutter_grocery/widgets/shared/gradient_button.dart';
 import 'package:flutter_grocery/widgets/shared/shared_banner.dart';
 
 class ProductDetails extends StatelessWidget {
@@ -77,6 +78,44 @@ class ProductDetails extends StatelessWidget {
                 productName: "Broccoli",
                 productQuantity: 100,
                 unitName: "g",
+              ),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text(
+                    "Total",
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  SizedBox(
+                    width: 50,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(right: 40.0),
+                    child: Text(
+                      "230\$",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w800,
+                          color: Color(0xff9E00FF)),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              const GradientButton(
+                buttonHeight: 50,
+                buttonWidth: double.infinity,
+                topColor: Color(0xffCC00FF),
+                bottomColor: Color(0xffFFE500),
+                buttonName: "Proceed To Pay",
+              ),
+              const SizedBox(
+                height: 20,
               ),
             ],
           ),
