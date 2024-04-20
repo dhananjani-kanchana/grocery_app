@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_grocery/pages/home_page/category_page/category_page.dart';
+import 'package:flutter_grocery/pages/home_page/home_page/home_page.dart';
 import 'package:flutter_grocery/pages/home_page/product_details/product_details.dart';
 
 void main() {
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Flutter Grocery App",
-      home: CategoryPage(), // this is my test comment.
+      home: ProductDetails(), // this is my test comment.
     );
-  }
+  } // this is second comment
 }
